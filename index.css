@@ -46,6 +46,21 @@ body {
     cursor: pointer;
 }
 
+.toggle-btn {
+    background-color: orangered;
+    color: #FFFFFF;
+    border: 0px;
+    border-radius: 6px;
+    padding: 9px 15px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+
 .pw-btn {
     background-color: #10B981;
     color: #FFFFFF;
@@ -68,10 +83,27 @@ body {
     margin-top: 40px;
     margin-bottom: 20px;
     font-size: 15px;
+    width: 170px;
+}
+
+.copy-btn:hover {
+    cursor: pointer;
 }
 
 .error-msg {
     color: red;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+}
+
+.success-msg {
+    color: greenyellow;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+}
+
+.toggle-state {
+    color: D5D4D8;
     font-family: 'Inter', sans-serif;
 }
 

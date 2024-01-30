@@ -10,7 +10,10 @@
         <p class="tagline">Never use an insecure password again.</p>
         <input class="length-input" id="length-el" type="number" />
         <button class="length-btn" onclick="passwordLength()">Set password length</button>
+        <button class="toggle-btn" onclick="toggle()">Toggle symbols & numbers</button>
         <div class="error-msg" id="error-msg"></div>
+        <div class="success-msg" id="success-msg"></div>
+        <div class="toggle-state" id="toggle-state">Symbols & numbers are enabled</div>
         <button class="pw-btn" onclick="passwordGenerator()">Generate passwords</button>
         <hr class="separator">
         <div class="password-field">
