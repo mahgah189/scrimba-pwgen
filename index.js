@@ -3,6 +3,16 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 let pwOneEl = document.getElementById("pw1");
 let pwTwoEl = document.getElementById("pw2");
+let pwLength = document.getElementById("length-el");
+let errorMessage = document.getElementById("error-msg");
+
+let pwLengthCache;
+
+function passwordLength() {
+    pwLengthCache = pwLength.value;
+    pwLength.value = "";
+    errorMessage.textContent = "";
+}
 
 function passwordGenerator() {
     // create variable to store password1
@@ -10,8 +20,15 @@ function passwordGenerator() {
     let passwordOne = "";
     let passwordTwo = "";
 
+    console.log(pwLengthCache);
+
+    if (pwLengthCache === undefined || pwLengthCache === "") {
+        errorMessage.textContent = "Please set a password length";
+        return;
+    }
+
     // create a for loop to generate each character (up to 15 characters)
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < pwLengthCache; i++) {
         passwordOne += characters[Math.floor(Math.random() * characters.length)];
         passwordTwo += characters[Math.floor(Math.random() * characters.length)];
     }
@@ -21,6 +38,12 @@ function passwordGenerator() {
     pwTwoEl.textContent = passwordTwo;
 }
 
-function test() {
-    console.log("hey")
+function copyPasswordOne() {
+    navigator.clipboard.writeText(pwOneEl.textContent);
+    alert("Copied password one: " + pwOneEl.textContent);
+}
+
+function copyPasswordTwo() {
+    navigator.clipboard.writeText(pwTwoEl.textContent);
+    alert("Copied password two: " + pwTwoEl.textContent);
 }

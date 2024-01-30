@@ -24,6 +24,28 @@ body {
     margin-top: 10px;
 }
 
+.length-input {
+    margin-right: 10px;
+    padding: 9px 15px;
+    width: 80px;
+}
+
+.length-btn {
+    background-color: darkorange;
+    color: #FFFFFF;
+    border: 0px;
+    border-radius: 6px;
+    padding: 9px 15px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.length-btn:hover {
+    cursor: pointer;
+}
+
 .pw-btn {
     background-color: #10B981;
     color: #FFFFFF;
@@ -34,6 +56,23 @@ body {
     margin-top: 40px;
     margin-bottom: 20px;
     font-size: 15px;
+}
+
+.copy-btn {
+    background-color: darkorchid;
+    color: #FFFFFF;
+    border: 0px;
+    border-radius: 6px;
+    padding: 9px 15px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.error-msg {
+    color: red;
+    font-family: 'Inter', sans-serif;
 }
 
 .pw-btn:hover {

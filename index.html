@@ -8,11 +8,18 @@
     <body>
         <h1 class="header-white">Generate a <br><span class="header-green">random password</span></h1>
         <p class="tagline">Never use an insecure password again.</p>
+        <input class="length-input" id="length-el" type="number" />
+        <button class="length-btn" onclick="passwordLength()">Set password length</button>
+        <div class="error-msg" id="error-msg"></div>
         <button class="pw-btn" onclick="passwordGenerator()">Generate passwords</button>
         <hr class="separator">
         <div class="password-field">
             <div class="pw-field" id="pw1"></div>
             <div class="pw-field" id="pw2"></div>
+        </div>
+        <div class="password-field">
+            <button class="copy-btn" id="pw1-copy" onclick="copyPasswordOne()">Copy password one</button>
+            <button class="copy-btn" id="pw2-copy" onclick="copyPasswordTwo()">Copy password two</button>
         </div>
         <script src="index.js"></script>
     </body>
